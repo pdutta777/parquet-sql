@@ -4,6 +4,11 @@ tasks:
       echo "pqsql" > .python-version
       poetry install
 
+  - command: |
+        pyenv virtualenv 3.8.13 pqsql
+        echo "psql" > .python-version
+        poetry install
+
 vscode:
   extensions:
     - ms-python.python
