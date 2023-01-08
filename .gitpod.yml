@@ -5,8 +5,7 @@ tasks:
       poetry install
 
   - command: |
-        pyenv virtualenv 3.8.13 pqsql
-        echo "psql" > .python-version
+        pyenv activate pqsql
         poetry install
 
 vscode:
