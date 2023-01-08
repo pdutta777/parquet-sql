@@ -1,3 +1,9 @@
 tasks:
-  - before: echo "3.8.13" > .python-version 
-    init: poetry install
+  - init: |
+      pyenv virtualenv 3.8.13 pqsql
+      echo "pqsql" > .python-version
+      poetry install
+
+vscode:
+  extensions:
+    - ms-python.python
