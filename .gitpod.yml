@@ -1,12 +1,8 @@
 tasks:
-  - init: |
-      pyenv virtualenv 3.8.13 pqsql
-      echo "pqsql" > .python-version
-      poetry install
-
-  - command: |
-        pyenv activate pqsql
-        poetry install
+  - name:  "Python environment"
+    before: pyenv virtualenv 3.8.13 pqsql
+    init: echo "pqsql" > .python-version
+    command: poetry install
 
 vscode:
   extensions:
