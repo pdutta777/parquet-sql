@@ -1,9 +1,11 @@
 tasks:
   - name:  "Python environment"
-    before: pyenv virtualenv 3.8.13 pqsql
+    before: pyenv virtualenv 3.8.16 pqsql
     init: echo "pqsql" > .python-version
     command: poetry install
 
 vscode:
   extensions:
+    - ms-python.isort
     - ms-python.python
+    - vscodevim.vim
